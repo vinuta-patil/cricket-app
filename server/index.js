@@ -30,3 +30,5 @@ require('./models/User');
 app.get('/', (req, res) => {
   res.send('Backend API is live ✅');
 });
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/users', userRoutes);
